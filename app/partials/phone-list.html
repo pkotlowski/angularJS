@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+
+      Search: <input ng-model="query">
+      Sort by:
+      <select ng-model="orderProp">
+        <option value="name">Alphabetical</option>
+        <option value="age">Newest</option>
+      </select>
+
+    </div>
+    <div class="col-md-10">
+      <!--Body content-->
+
+      <ul class="phones">
+        <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail">
+          
+          <!--<a href="#/phones/{{phone.id.$t.slice(42,53)}}">KLIK</a>-->
+          <p>{{phone.yt$statistics.viewCount}}</p>
+          <p>{{phone.content.$t}}</p>
+          <p>{{phone.gd$rating.average}}</p>
+          <p>{{phone.id.$t.slice(42,53)}}</p>
+          
+          <!--<div data-youtube data-code={{phone.id.$t.slice(42,53)}}></div>-->
+          <p>
+          <a href="//youtube.com/watch/{{phone.id.$t.slice(42,53)}}">Klik</a>
+          </p>
+          <div my-youtube code={{phone.id.$t.slice(42,53)}}></div>
+          
+          <p> Edit</p>
+          
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
