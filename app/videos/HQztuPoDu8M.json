@@ -1,0 +1,22 @@
+{ "author" : [ { "name" : { "$t" : "FooFightersLive.com" },
+                  "uri" : { "$t" : "http://gdata.youtube.com/feeds/api/users/OfficialFFL" }
+                } ],            
+            "content" : { "$t" : "The \"complete\" webcast of the Bud Light Hotel show on February 1st. The broadcast cut out after 45 minutes into a 2hr+ set so this is all we've got for now. ...",
+                "type" : "text"
+              },            
+            "gd$rating" : { "average" : 4.9696740000000004,
+                "max" : 5,
+                "min" : 1,
+                "numRaters" : 1319,
+                "rel" : "http://schemas.google.com/g/2005#overall"
+              },
+            "id" : { "$t" : "http://gdata.youtube.com/feeds/api/videos/HQztuPoDu8M" },            
+            "published" : { "$t" : "2014-02-02T14:36:20.000Z" },
+            "title" : { "$t" : "Foo Fighters - Bud Light Hotel Amphitheatre February 1st 2014 webstream",
+                "type" : "text"
+              },
+            "updated" : { "$t" : "2014-05-19T16:51:24.000Z" },            
+            "yt$statistics" : { "favoriteCount" : "0",
+                "viewCount" : "131676"
+              }
+          }

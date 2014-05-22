@@ -2,22 +2,27 @@
 
 /* App Module */
 
-var phonecatApp = angular.module('phonecatApp', [
+var youTubeApp = angular.module('youTubeApp', [
     'ngRoute',
-    'phonecatControllers',
-    'phonecatFilters',
-    'phonecatServices'
+    'applicationControllers',
+    'applicationFilters',
+    'applicationServices'
+    //'phonecatDirectives'
 ]);
-phonecatApp.config(['$routeProvider',
+youTubeApp.config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider.
-                when('/phones', {
-                    templateUrl: 'partials/phone-list.html',
-                    controller: 'PhoneListCtrl'
+                when('/videos/', {
+                    templateUrl: 'partials/videos.html',
+                    controller: 'AllVideosController'
                 }).
-                when('/phones/:phoneId', {
-                    templateUrl: 'partials/phone-detail.html',
-                    controller: 'PhoneDetailCtrl'
+                when('/video/:videoId', {
+                    templateUrl: 'partials/video.html',
+                    controller: 'ShowVideoController'
+                }).
+                when('/main', {
+                    templateUrl: 'partials/addVideo.html'
+                    //controller: 'PhoneDetailCtrl'
                 }).
                 otherwise({
                     redirectTo: '/phones'

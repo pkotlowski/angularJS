@@ -3,7 +3,9 @@
 body {
   padding-top: 20px;
 }
-
+.h3{
+    margin-top: 5px;
+}
 
 .phone-images {
   background-color: white;
@@ -29,7 +31,7 @@ body {
 .phones li {
   clear: both;
   height: 215px;
-  padding-top: 15px;
+  padding-top: 0px;
 }
 
 /** Detail View **/
