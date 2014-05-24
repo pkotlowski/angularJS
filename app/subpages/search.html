@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">     
+
+            Search: <input ng-model="text">
+
+            <br>
+            Sort by:
+            <select ng-model="orderProp">
+              <option value="video.title.$t">Alphabetical</option>
+              <option value="video.id.$t">By rating</option>
+            </select>
+
+        </div>
+        <div class="col-md-10">
+            <div class="searchVideo">
+                <ul class="phones">
+                    <li ng-repeat="video in videos|filter:text" class="thumbnail"> 
+
+                        <div><p>{{video.gd$rating.average}}</p></div>
+                        <a href="#/video/{{video.id.$t.slice(42, 53)}}" class="h3">{{video.title.$t}}</a>              
+                        <p> Edit</p>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

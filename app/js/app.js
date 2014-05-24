@@ -5,27 +5,32 @@
 var youTubeApp = angular.module('youTubeApp', [
     'ngRoute',
     'applicationControllers',
-    'applicationFilters',
-    'applicationServices'
+    'applicationServices',
+    //'applicationFilters'
     //'phonecatDirectives'
 ]);
+
 youTubeApp.config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider.
                 when('/videos/', {
-                    templateUrl: 'partials/videos.html',
+                    templateUrl: 'subpages/videos.html',
                     controller: 'AllVideosController'
                 }).
                 when('/video/:videoId', {
-                    templateUrl: 'partials/video.html',
+                    templateUrl: 'subpages/video.html',
                     controller: 'ShowVideoController'
                 }).
                 when('/main', {
-                    templateUrl: 'partials/addVideo.html'
+                    templateUrl: 'subpages/addVideo.html'
                     //controller: 'PhoneDetailCtrl'
                 }).
+                when('/search', {
+                    templateUrl: 'subpages/search.html',
+                    controller: 'search'
+                }).
                 otherwise({
-                    redirectTo: '/phones'
+                    redirectTo: '/videos'
                 });
     }]);
 

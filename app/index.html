@@ -1,28 +1,33 @@
 <!doctype html>
 <html lang="en" ng-app="youTubeApp">
-<head>
-  <meta charset="utf-8">
-  <title>Google Phone Gallery</title>
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="css/app.css">
-  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="bower_components/angular/angular.js"></script>
-  
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="bower_components/angular-resource/angular-resource.js"></script>
-  <script src="js/app.js"></script>
-  
-  <script src="js/controllers.js"></script>
-  <script src="js/filters.js"></script>
-  <script src="js/services.js"></script>
-</head>
-<body>
-    <div>
-        <a href="#/main">Add video</a>        
-    </div>
-<div ng-view></div>
+    <head>
+        <meta charset="utf-8">
+        <title>YT browser</title>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="css/app.css">
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
 
-  
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/find.js"></script>
+        <script src="js/controllers.js"></script>
 
-</body>
+        <script src="js/services.js"></script>
+    </head>
+    <body>
+        <div>
+            <button class="btn-lg"><a href="#/main">Add video</a></button>
+            <button class="btn-lg"><a href="#/phones">Main page</a></button> 
+        </div>
+        <div ng-controller="searchVideo">
+            <input ng-model="searchInput">
+            <button class="btn-info" id="searchVideoBtn" ng-click="searchVideo()"><a href="#/search"> Search</a></button>
+        </div>
+        <div ng-view></div>
+
+
+
+    </body>
 </html>
