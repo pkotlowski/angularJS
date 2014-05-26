@@ -5,21 +5,21 @@
 var applicationControllers = angular.module('applicationControllers', []);
 var a;
 var result = new Array();
-applicationControllers.controller('DeleteController', ['$scope', '$rootScope', '$route', '$routeParams',
-    function ($rootScope, $route, $routeParams) {
-        console.log("przed "+result)
+applicationControllers.controller('DeleteController', ['$scope', '$rootScope', 
+    '$route', '$routeParams','$location',
+    function ($rootScope, $route, $routeParams, $location) {        
         for (var i = 0; i < result.length; i++) {
-            if ($routeParams.current.params.vidId === result[i].id.$t.slice(42, 53)) {
-                result.splice(i,1)
+            if ($routeParams.current.params.vidId === result[i].entry.id.$t.slice(42, 53)) {
+                result.splice(i, 1);
                 break;
             }
-        }       
+        }
         $rootScope.a = result;
+        $location.path("/videos");
     }]);
 applicationControllers.controller('LoadDbController', ['$http', '$rootScope', '$location',
     function ($http, $rootScope, $location) {
-
-        $http.get('js/videos.js').success(function (data) {
+        $http.get('js/videos.json').success(function (data) {
             for (var i = 0; i < data.length; i++) {
                 var x = new Object(data[i])
                 result.push(x)
@@ -55,12 +55,18 @@ youTubeApp.directive('myYoutube', function ($sce) {
     };
 });
 applicationControllers.controller('ShowVideoController', ['$scope', '$routeParams', '$http',
-    function ($scope, $routeParams, $http) {
-        $http.get('videos/' + $routeParams.videoId + '.json').success(function (data) {
-            $scope.video = data;
-        });
+    function ($scope, $routeParams, $http, $rootScope) {
+        for (var i = 0; i < result.length; i++) {
+            if ($routeParams.videoId === result[i].entry.id.$t.slice(42, 53)) {
+                $scope.video = result[i];
+                break;
+            }
+        }
+//        $http.get('videos/' + $routeParams.videoId + '.json').success(function (data) {
+//            $scope.video = data;
+//        });
     }]);
-applicationControllers.controller('addNewVideo', function ($scope) {
+applicationControllers.controller('addNewVideo', function ($scope, $rootScope) {
     $scope.addVideo = function () {
         console.log($scope.videoLink)
         var link = $scope.videoLink.toString();
@@ -68,11 +74,13 @@ applicationControllers.controller('addNewVideo', function ($scope) {
         if (link.search("youtube.com") > -1) {
             id = link.slice(32, 53);
             $.getJSON("https://gdata.youtube.com/feeds/api/videos/" + id + "?&prettyprint=true&alt=json", function (data) {
-                a.push(JSON.stringify(data, undefined, 2));
+                result.push(new Object(data))
                 console.log(JSON.stringify(data, undefined, 2))
             })
         }
     };
+    $rootScope.a = result
+    console.log($rootScope.a)
 });
 
 applicationControllers.controller('searchVideo', function ($scope) {

@@ -1,27 +1,27 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-2">     
+            <input ng-model="searchText.title.$t">
 
-            
             Sort by:
             <select ng-model="orderProp">
-              <option value="video.title.$t">Alphabetical</option>
-              <option value="video.id.$t">By rating</option>
+                <option value="entry.title.$t">Alphabetical</option>
+                <option value="entry.gd$rating.average">By rating</option>
             </select>
 
         </div>
         <div class="col-md-10">
-            <div class="search">
+            
                 <ul class="phones">
-                    <li ng-repeat="video in videos" class="thumbnail"> 
+                    <li ng-repeat="video in videos|orderBy: orderProp |filter:searchText" class="thumbnail"> 
 
-                        <div><p>{{video.gd$rating.average}}</p></div>
-                        <a href="#/video/{{video.id.$t.slice(42, 53)}}" class="h3">{{video.title.$t}}</a>              
+                        <div><p>{{video.entry.gd$rating.average}}</p></div>
+                        <a href="#/video/{{video.entry.id.$t.slice(42, 53)}}" class="h3">{{video.entry.title.$t}}</a>              
                         <p> Edit</p>
-                        <p><a href="#/delete/{{video.id.$t.slice(42, 53)}}/" class="bg-warning">Delete</a></p>
+                        <p><a href="#/delete/{{video.entry.id.$t.slice(42, 53)}}/" class="bg-warning">Delete</a></p>
                     </li>
                 </ul>
-            </div>
+            
         </div>
     </div>
 </div>

@@ -1,13 +1,13 @@
 
 
 
-<h1>{{video.title.$t}}</h1>
-<p>Rating: {{video.gd$rating.average}}</p>
-<p>Viewed: {{video.yt$statistics.viewCount}}</p>
-  <div my-youtube class="video" code={{video.id.$t.slice(42,53)}}></div>
+<h1>{{video.entry.title.$t}}</h1>
+<p>Rating: {{video.entry.gd$rating.average}}</p>
+<p>Viewed: {{video.entry.yt$statistics.viewCount}}</p>
+  <div my-youtube class="video" code={{video.entry.id.$t.slice(42,53)}}></div>
   <div>
       <p>
-          {{video.content.$t}}
+          {{video.entry.content.$t}}
       </p>
   </div>
 
