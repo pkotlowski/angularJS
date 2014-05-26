@@ -1,0 +1,35 @@
+{
+  "id" : { "$t" : "http://gdata.youtube.com/feeds/api/videos/ktnsGEc4OPs" },
+    "title": {
+      "$t": "New Dawn (Deep House Mix by Felix Jaehn)",
+      "type": "text"
+    },
+    "content": {
+      "$t": "MrRevillz - Making music sound better\n» Dont Forget To Subscribe: http://bit.ly/J9hEMW\n» Facebook: http://on.fb.me/19gzPNB\n» Twitter: http://bit.ly/19gzZVa\n» Download This Mix Free: http://on.fb.me/1kokIUx\n\nIt is great to introduce a new guest mix to you all from our friend Felix Jaehn. Most of you will know him through his Tom Odell and Phil Collins remixes. We also have a guest mix from our regular LCAW coming in the next few weeks. Please don't forget to like, favourite, comment and share this mix as we would love to know what people think about it.\n\n1) Felix Jaehn - Sommer Am Meer (Intro edit)\n2) Nora En Pure - Come With Me (DBMM Remix)\n3) KANT - Feelings (Original Mix)\n4) De Hofnar - De Nacht (Original Mix)\n5) Felix Jaehn, De Hofnar - Roar Of Love (Original Mix)\n6) KlangTherapeuten - Mountain Top (Original Mix) feat. Leonard Bywa\n7) Robin Schulz - Prayer (Bootleg)\n8) Nico Pusch - Augenblick (Original Mix)\n9) Richi - Your Mind (Felix Jaehn Remix)\n10) De Hofnar, Felix Jaehn - Valvé (Original Mix)\n11) Felix Jaehn, De Hofnar - ID (Instrumental) \n12) De Hofnar - Zonnestraal (MÖWE Remix)\n13) Rihanna - Only Girl In The World (TEEMID & Makeda Purple Cover)\n\n⍟ Follow Felix Jaehn\nhttps://soundcloud.com/felixjaehn\nhttps://facebook.com/FelixJaehnMusic\n\n⍟ Follow Nora En Pure\nhttps://soundcloud.com/noraenpure\nhttps://facebook.com/NoraEnPure\n\n⍟ Follow DBMM\nhttps://soundcloud.com/dbmm\nhttps://facebook.com/DiscoburgerMusicMonster\n\n⍟ Follow KANT\nhttps://soundcloud.com/kantmusic\nhttps://facebook.com/kantmusic\n\n⍟ Follow De Hofnar\nhttps://soundcloud.com/de-hofnar\nhttps://facebook.com/pages/De-Hofnar/143910029096941\n\n⍟ Follow KlangTherapeuten\nhttps://soundcloud.com/klangtherapeuten\nhttps://facebook.com/yeeees.thats.us\n\n⍟ Follow Leonard Bywa\nhttps://soundcloud.com/lbywa\nhttps://facebook.com/Leonardbywa\n\n⍟ Follow Robin Schulz\nhttps://soundcloud.com/robin-schulz\nhttps://facebook.com/robin.schulz.official\n\n⍟ Follow Nico Pusch\nhttps://soundcloud.com/nicopusch\nhttps://facebook.com/nicopuschmusic\n\n⍟ Follow MÖWE\nhttps://soundcloud.com/m-we-1\nhttps://www.facebook.com/MOEWEmusic\n\n⍟ Follow TEEMID\nhttps://soundcloud.com/teemid\nhttps://facebook.com/teemid\n\n⍟ Follow Makeda Purple\nhttps://soundcloud.com/makeda-purple\nhttps://www.facebook.com/MakedaMusicOfficial\n\n⍟ Download Mix Here\nhttp://on.fb.me/1kokIUx\n\n⍟ Picture\nhttp://bit.ly/1aRY13L\n\nFor any business enquiries, copyright infringements please do not hesitate to contact us - Info@MrRevillz.com",
+      "type": "text"
+    },
+    
+    "author": [
+      {
+        "name": {
+          "$t": "MrRevillz"
+        },
+        "uri": {
+          "$t": "https://gdata.youtube.com/feeds/api/users/MrRevillz"
+        }
+      }
+    ],
+    
+    "gd$rating": {
+      "average": 4.9293547,
+      "max": 5,
+      "min": 1,
+      "numRaters": 5379,
+      "rel": "http://schemas.google.com/g/2005#overall"
+    },
+    "yt$statistics": {
+      "favoriteCount": "0",
+      "viewCount": "702035"
+    }
+  
+} 

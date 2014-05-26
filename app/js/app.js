@@ -6,13 +6,21 @@ var youTubeApp = angular.module('youTubeApp', [
     'ngRoute',
     'applicationControllers',
     'applicationServices',
-    //'applicationFilters'
-    //'phonecatDirectives'
+            //'applicationFilters'
+            //'phonecatDirectives'
 ]);
 
 youTubeApp.config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider.
+                when('/start', {
+                    template:'',
+                    controller: 'LoadDbController'
+                }).
+                when('/delete/:vidId', {
+                    template:'',
+                    controller: 'DeleteController'
+                }).
                 when('/videos/', {
                     templateUrl: 'subpages/videos.html',
                     controller: 'AllVideosController'
@@ -23,7 +31,7 @@ youTubeApp.config(['$routeProvider',
                 }).
                 when('/main', {
                     templateUrl: 'subpages/addVideo.html'
-                    //controller: 'PhoneDetailCtrl'
+                            
                 }).
                 when('/search', {
                     templateUrl: 'subpages/search.html',
