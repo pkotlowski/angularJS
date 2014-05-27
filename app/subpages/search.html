@@ -1,26 +1,22 @@
-<div class="container-fluid">
+<div class="container-fluid" ng-controller="searchInYtController">
     <div class="row">
         <div class="col-md-2">     
-
-            Search: <input ng-model="text">
-
-            <br>
-            Sort by:
-            <select ng-model="orderProp">
-              <option value="video.title.$t">Alphabetical</option>
-              <option value="video.id.$t">By rating</option>
-            </select>
-
+            <form>
+            Search: <input ng-model="searchedVideoTitle" required>
+            <button class="btn-info" ng-click="searchVideo()">KLIK</button>
+            </form>
         </div>
         <div class="col-md-10">
             <div class="searchVideo">
-                <ul class="phones">
-                    <li ng-repeat="video in videos|filter:text" class="thumbnail"> 
+                <ul class="phones2">
+                    <li ng-repeat="video in videos track by $id(video.entry.gd$rating.average)" class="thumbnail"> 
 
-                        <div><p>{{video.gd$rating.average}}</p></div>
-                        <a href="#/video/{{video.id.$t.slice(42, 53)}}" class="h3">{{video.title.$t}}</a>              
-                        <p> Edit</p>
-
+                        <p>{{video.gd$rating.average}}</p>
+                        <h3>{{video.title.$t}}</h3>
+                        
+                        <div my-youtube class="video" code={{video.id.$t.slice(42,53)}}></div>
+                        
+                        <a ng-click="add(video.id.$t.slice(42,53))" ><img ng-src="img/images.jpg"></a>
                     </li>
                 </ul>
             </div>

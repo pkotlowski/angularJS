@@ -29,13 +29,14 @@ youTubeApp.config(['$routeProvider',
                     templateUrl: 'subpages/video.html',
                     controller: 'ShowVideoController'
                 }).
+                
                 when('/main', {
                     templateUrl: 'subpages/addVideo.html'
                             
                 }).
                 when('/search', {
                     templateUrl: 'subpages/search.html',
-                    controller: 'search'
+                    controller: 'searchInYtController'
                 }).
                 otherwise({
                     redirectTo: '/videos'
